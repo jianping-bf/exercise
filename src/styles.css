@@ -1,0 +1,191 @@
+:root {
+  --light-bg-color: #f9f9f0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  color: #222222;
+}
+
+.App {
+  font-family: sans-serif;
+  text-align: center;
+  margin: 0.5rem;
+}
+
+.logo {
+  height: 100px;
+}
+
+.selected {
+  display: flex;
+  align-items: center; /* Veritical (text) */
+  justify-content: center; /* Horizontal (all) */
+  margin: 4rem;
+}
+.selected .card {
+  box-shadow: inset 0 0 40px #fff, -10px 0 60px #222;
+  transform: rotate(-10deg);
+}
+.selected .text {
+  margin-left: 5%;
+  font-size: 2.5rem;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card {
+  box-sizing: border-box;
+  padding: 10px;
+  margin: 0.5rem;
+  width: 170px;
+  height: 250px;
+  border-radius: 10px;
+}
+
+.name {
+  text-align: left;
+  margin-bottom: 5px;
+  font-size: 0.9rem;
+}
+
+.name-jp {
+  float: right;
+  color: blue;
+  font-weight: bold;
+  font-size: 0.7rem;
+}
+
+.image {
+  justify-content: center;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  background-color: var(--light-bg-color);
+  display: flex;
+  /* Allows positioning .code */
+  position: relative;
+  /* Allow showing image over stats */
+  max-width: 155px;
+  max-height: 120px;
+  overflow: visible;
+}
+
+.image img {
+  /* padding-left: 24px; */
+  opacity: 0.85;
+  z-index: 1;
+  /* Overlap name and stats */
+  margin-top: -26px;
+  margin-left: 20px;
+  height: 185px;
+}
+
+.image .code {
+  font-size: 0.8rem;
+  /* Float in fixed part of image */
+  position: absolute;
+  top: 5px;
+  left: 2px;
+  /* Show above images clearly where image overlaps (e.g. caterpie) */
+  z-index: 2;
+  background-color: var(--light-bg-color);
+  height: 15px;
+  width: 26px;
+  border-radius: 50%;
+  opacity: 0.7;
+}
+
+table {
+  border-spacing: 1px;
+  /** Make table use all with with dynamically sized columns. */
+  table-layout: auto;
+  width: 100%;
+}
+
+tr {
+  text-align: left;
+  font-size: 11px;
+}
+
+/* Zebra table with colour derived from Pokemon type. */
+tr:nth-child(odd) {
+  filter: brightness(108%);
+}
+tr:nth-child(even) {
+  filter: brightness(120%);
+}
+
+/*  */
+tr td:first-child {
+  text-align: left;
+  padding-left: 15px;
+}
+tr td:nth-child(2) {
+  text-align: right;
+  padding-right: 15px;
+}
+td {
+  padding: 2px;
+}
+
+.none {
+  background-color: hsl(0, 0%, 70%);
+}
+.grass {
+  background-color: hsl(120, 50%, 80%);
+}
+.fire {
+  background-color: hsl(40, 70%, 80%);
+}
+.bug {
+  background-color: hsl(260, 50%, 80%);
+}
+.water {
+  background-color: hsl(230, 50%, 80%);
+}
+.normal {
+  background-color: hsl(60, 60%, 80%);
+}
+.poison {
+  background-color: hsl(80, 60%, 80%);
+}
+.fairy {
+  background-color: hsl(300, 50%, 80%);
+}
+.ground {
+  background-color: hsl(30, 60%, 80%);
+}
+.psychic {
+  background-color: hsl(190, 50%, 80%);
+}
+.fighting {
+  background-color: hsl(160, 50%, 80%);
+}
+.rock {
+  background-color: hsl(220, 20%, 80%);
+}
+.electric {
+  background-color: hsl(220, 80%, 80%);
+}
+.ghost {
+  background-color: hsl(260, 60%, 90%);
+}
+.ice {
+  background-color: hsl(200, 80%, 90%);
+}
+.dragon {
+  background-color: hsl(0, 60%, 85%);
+}
+.dark {
+  background-color: hsl(240, 10%, 80%);
+}
+.steel {
+  background-color: hsl(240, 40%, 90%);
+}
+.flying {
+  background-color: hsl(186, 60%, 80%);
+}
